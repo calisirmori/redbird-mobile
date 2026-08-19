@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://calisirmori.github.io/redbird-mobile/sitemap.xml
+Sitemap: https://redbirdmobile.com/sitemap.xml

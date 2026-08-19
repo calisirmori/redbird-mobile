@@ -5,7 +5,7 @@ operated mobile auto service in Arizona.
 
 Static site, no build step. Open `index.html` in a browser and it works.
 
-**Live:** https://calisirmori.github.io/redbird-mobile/
+**Live:** https://redbirdmobile.com  (also serves at https://calisirmori.github.io/redbird-mobile/)
 **Booking:** handled by Square — every "Book" button links to the Square appointments page.
 
 ## Files
@@ -69,23 +69,16 @@ git push
 
 Give it a minute, then hard-refresh.
 
-## Pointing www.redbirdmobile.com here
+## Domain
 
-Two ways, depending on what you want:
+`redbirdmobile.com` is the live address. Two pieces make that work:
 
-**A domain forward / redirect** (what your registrar calls "forwarding") — visitors land
-on `calisirmori.github.io/redbird-mobile` in the address bar. Nothing to change in this
-repo. Quickest, but the GitHub URL is what people see and what Google indexes.
+- The `CNAME` file in this repo, which tells GitHub Pages to claim the domain. **Don't delete it** —
+  removing it drops the site back to the `github.io` URL.
+- DNS at the registrar: four `A` records on `@` pointing at GitHub's edge
+  (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153`), and a `CNAME` on `www`.
 
-**A real custom domain** (recommended) — the site serves *as* `www.redbirdmobile.com`,
-with a free HTTPS certificate.
+Email is handled separately by the `MX` and `TXT` (SPF / DKIM / DMARC) records and is not
+affected by anything in this repo.
 
-1. At your registrar, add a `CNAME` record: `www` → `calisirmori.github.io`
-2. In this repo: **Settings → Pages → Custom domain**, enter `www.redbirdmobile.com`, save.
-   That writes a `CNAME` file to the repo.
-3. Wait for the DNS check to pass, then tick **Enforce HTTPS**.
-4. Update these to the new domain, since they still say `github.io`:
-   - the `<link rel="canonical">` and `og:` URLs in `index.html`
-   - the `url` / `logo` / `image` fields in the structured data block
-   - the paths in `404.html` (drop the `/redbird-mobile` prefix)
-   - the URLs in `robots.txt` and `sitemap.xml`
+If you ever move the site off GitHub Pages, change the `A` records — leave the mail records alone.

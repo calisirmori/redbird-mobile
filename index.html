@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Red Bird Mobile Auto and Fleet &mdash; Mobile Oil Changes in Arizona</title>
+<meta name="description" content="Veteran owned, firefighter operated mobile auto service in Arizona. Oil changes, air and cabin filters and tire rotation done at your home, office or job site, with a free vehicle health check on every oil change.">
+<link rel="canonical" href="https://calisirmori.github.io/redbird-mobile/">
+<meta name="theme-color" content="#14100E">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Red Bird Mobile Auto and Fleet">
+<meta property="og:title" content="Red Bird Mobile Auto and Fleet">
+<meta property="og:description" content="Veteran owned, firefighter operated mobile auto service in Arizona. Oil changes, air and cabin filters and tire rotation done at your home, office or job site, with a free vehicle health check on every oil change.">
+<meta property="og:url" content="https://calisirmori.github.io/redbird-mobile/">
+<meta property="og:image" content="https://calisirmori.github.io/redbird-mobile/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Red Bird Mobile Auto and Fleet — your driveway is the shop.">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Local business structured data. TODO: add "telephone" and "address" once those are set,
+     and swap the URLs below to https://www.redbirdmobile.com/ when the domain is pointed here. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Red Bird Mobile Auto and Fleet LLC",
+  "description": "Veteran owned, firefighter operated mobile auto service in Arizona. Oil changes, air and cabin filters and tire rotation done at your home, office or job site, with a free vehicle health check on every oil change.",
+  "url": "https://calisirmori.github.io/redbird-mobile/",
+  "logo": "https://calisirmori.github.io/redbird-mobile/assets/logo.png",
+  "image": "https://calisirmori.github.io/redbird-mobile/assets/og-image.jpg",
+  "priceRange": "$$",
+  "areaServed": {"@type": "State", "name": "Arizona"},
+  "makesOffer": {
+    "@type": "OfferCatalog",
+    "name": "Mobile auto and fleet services",
+    "itemListElement": [
+        {"@type":"Offer","priceCurrency":"USD","price":"85.00",
+         "itemOffered":{"@type":"Service","name":"Conventional Oil Change","description":"Conventional oil up to 5 quarts, new filter and a free Red Bird Vehicle Health Check."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"105.00",
+         "itemOffered":{"@type":"Service","name":"Full Synthetic Oil Change","description":"Full synthetic oil up to 5 quarts, new filter and a free Red Bird Vehicle Health Check."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"159.00",
+         "itemOffered":{"@type":"Service","name":"Diesel Oil Change","description":"Diesel oil up to 12 quarts, new filter and a free Red Bird Vehicle Health Check."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"100.00",
+         "itemOffered":{"@type":"Service","name":"UTV Oil & Filter Change","description":"Premium powersports oil and filter for side-by-sides."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"15.00",
+         "itemOffered":{"@type":"Service","name":"Engine Air Filter Replacement","description":"Labor for a standard-access engine air filter swap. Filter cost billed separately."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"15.00",
+         "itemOffered":{"@type":"Service","name":"Cabin Air Filter Replacement","description":"Labor for a standard-access cabin air filter swap. Filter cost billed separately."}},
+        {"@type":"Offer","priceCurrency":"USD","price":"45.00",
+         "itemOffered":{"@type":"Service","name":"Tire Rotation","description":"Standard four-tire rotation including a tire pressure check."}}
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+</head>
+<body>
+<style>
+/* ---------- tokens: light (default) ---------- */
+:root{
+  --cardinal:#C62C22;
+  --cardinal-deep:#9E1F17;
+  --ember:#C56227;
+  --ink:#14100E;
+
+  --bg:#FBF4E9;
+  --surface:#FFFCF6;
+  --surface-2:#F6E9D6;
+  --line:#E0CDB2;
+  --line-strong:#C7AF92;
+  --text:#1B1512;
+  --text-2:#5E4F44;
+  --text-3:#8A7768;
+  --accent:var(--cardinal);
+  --accent-ink:#FFFFFF;
+  --seal:#9E1F17;
+
+  /* fixed: the hero band is always badge-black in both themes */
+  --dk-bg:#14100E;
+  --dk-bg-2:#1D1714;
+  --dk-text:#F7EEDF;
+  --dk-text-2:#C4B4A0;
+  --dk-line:#3A2E27;
+  --sand:#F6E1C6;
+  --red-on-dark:#E03B2D;
+
+  --logo:url("assets/logo.webp");
+  --maxw:1120px;
+  --r:4px;
+
+  --step--1:clamp(.8rem,.78rem + .1vw,.86rem);
+  --step-0:clamp(1rem,.97rem + .15vw,1.08rem);
+  --step-1:clamp(1.15rem,1.09rem + .3vw,1.3rem);
+  --step-2:clamp(1.5rem,1.35rem + .7vw,1.9rem);
+  --step-3:clamp(2.1rem,1.7rem + 1.9vw,3.1rem);
+  --step-4:clamp(3rem,2.1rem + 4.2vw,5.4rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14100E;
+    --surface:#1D1714;
+    --surface-2:#241C18;
+    --line:#362B25;
+    --line-strong:#4C3D34;
+    --text:#F7EEDF;
+    --text-2:#C0B09C;
+    --text-3:#93816F;
+    --accent:#E24234;
+    --accent-ink:#170B09;
+    --seal:#E24234;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14100E;
+  --surface:#1D1714;
+  --surface-2:#241C18;
+  --line:#362B25;
+  --line-strong:#4C3D34;
+  --text:#F7EEDF;
+  --text-2:#C0B09C;
+  --text-3:#93816F;
+  --accent:#E24234;
+  --accent-ink:#170B09;
+  --seal:#E24234;
+}
+
+/* ---------- reset ---------- */
+*,*::before,*::after{box-sizing:border-box}
+body,h1,h2,h3,h4,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+button,input{font:inherit}
+
+/* ---------- base ---------- */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:400 var(--step-0)/1.65 Barlow,"Helvetica Neue",Arial,sans-serif;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;font-weight:800;line-height:.94;text-transform:uppercase;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
+.eyebrow{
+  font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:600;
+  font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--text-3);
+}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:transparent;transition:background .25s ease,border-color .25s ease;
+  border-bottom:1px solid transparent;
+}
+header.is-stuck{background:color-mix(in srgb,var(--dk-bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom-color:var(--dk-line)}
+.nav{display:flex;align-items:center;gap:1.5rem;height:72px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;margin-right:auto}
+.mark{display:block;background:var(--logo) center/contain no-repeat;flex:none}
+.brand .mark{margin-right:.1rem}
+.brand b{
+  font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:1.15rem;
+  letter-spacing:.02em;color:var(--dk-text);line-height:1;text-transform:uppercase;
+}
+.brand .wordmark i{display:block;font-style:normal;font-family:"Barlow Condensed",sans-serif;font-size:.68rem;letter-spacing:.18em;color:var(--dk-text-2);text-transform:uppercase;font-weight:600}
+.nav a.link{
+  font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:.95rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--dk-text-2);text-decoration:none;transition:color .18s
+}
+.nav a.link:hover{color:var(--sand)}
+@media (max-width:860px){.nav a.link{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  font-size:1rem;padding:.72rem 1.35rem;border-radius:var(--r);text-decoration:none;
+  border:1px solid transparent;cursor:pointer;transition:transform .12s ease,background .18s ease,color .18s ease;
+}
+.btn:active{transform:translateY(1px)}
+.btn-red{background:var(--cardinal);color:#fff;box-shadow:0 1px 0 rgba(0,0,0,.35)}
+.btn-red:hover{background:#DE3527}
+.btn-ghost-dk{border-color:var(--dk-line);color:var(--dk-text);background:rgba(255,255,255,.03)}
+.btn-ghost-dk:hover{border-color:var(--sand);background:rgba(246,225,198,.08)}
+.btn-ghost{border-color:var(--line-strong);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-lg{font-size:1.12rem;padding:.9rem 1.7rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--dk-bg);color:var(--dk-text);margin-top:-72px;padding-top:72px;overflow:hidden;isolation:isolate}
+.hero::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(52% 46% at 72% 26%,rgba(197,98,39,.34),transparent 62%),
+    radial-gradient(70% 55% at 20% 8%,rgba(198,44,34,.16),transparent 65%),
+    linear-gradient(180deg,#1B1512 0%,#14100E 55%,#0E0B0A 100%);
+}
+.ridge{position:absolute;left:0;right:0;bottom:0;z-index:-1;width:100%;height:min(38vh,300px);display:block}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:3.5rem;align-items:center;padding:clamp(3rem,7vw,6rem) 0 clamp(6rem,13vw,10rem)}
+@media (max-width:900px){.hero-inner{grid-template-columns:1fr;gap:2.5rem;text-align:center;padding-bottom:clamp(5rem,18vw,8rem)}}
+
+.hero .eyebrow{color:var(--sand);display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+@media (max-width:900px){.hero .eyebrow{justify-content:center}}
+.eyebrow i{width:5px;height:5px;background:var(--red-on-dark);border-radius:50%;display:inline-block;font-style:normal}
+.hero h1{font-size:var(--step-4);color:#fff;margin:.5rem 0 0;letter-spacing:-.005em}
+.hero h1 em{font-style:normal;color:var(--red-on-dark);display:block}
+.hero p.lede{margin-top:1.15rem;font-size:var(--step-1);color:var(--dk-text-2);max-width:34ch;line-height:1.55}
+@media (max-width:900px){.hero p.lede{margin-inline:auto}}
+.hero-cta{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap}
+@media (max-width:900px){.hero-cta{justify-content:center}}
+.badge-shot{justify-self:center;width:min(340px,74vw);aspect-ratio:545/550;filter:drop-shadow(0 24px 44px rgba(0,0,0,.55))}
+
+/* trust strip */
+.strip{background:var(--dk-bg-2);border-block:1px solid var(--dk-line);color:var(--dk-text)}
+.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip li{padding:1.1rem .5rem;text-align:center;border-left:1px solid var(--dk-line)}
+.strip li:first-child{border-left:0}
+.strip b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.6rem;color:var(--sand);line-height:1;font-variant-numeric:tabular-nums}
+.strip span{font-family:"Barlow Condensed",sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dk-text-2)}
+@media (max-width:720px){
+  .strip ul{grid-template-columns:1fr 1fr}
+  .strip li:nth-child(3){border-left:0}
+  .strip li:nth-child(n+3){border-top:1px solid var(--dk-line)}
+}
+
+/* ---------- section scaffold ---------- */
+section{padding:clamp(3.5rem,7vw,6rem) 0}
+.sec-head{max-width:62ch;margin-bottom:clamp(2rem,4vw,3rem)}
+.sec-head h2{font-size:var(--step-3);margin:.55rem 0 0}
+.sec-head p{margin-top:.9rem;color:var(--text-2);font-size:var(--step-1);line-height:1.55;max-width:56ch}
+.banner-rule{display:flex;align-items:center;gap:.5rem}
+.banner-rule::after{content:"";height:2px;flex:1;background:var(--accent);opacity:.9}
+.banner-rule::before{content:"";width:26px;height:2px;background:var(--accent)}
+
+/* ---------- value props ---------- */
+.props{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.props article{background:var(--bg);padding:1.6rem 1.4rem}
+.props svg{width:26px;height:26px;color:var(--accent);margin-bottom:.9rem}
+.props h3{font-size:1.35rem;letter-spacing:.01em}
+.props p{margin-top:.5rem;color:var(--text-2);font-size:.95rem;line-height:1.55}
+@media (max-width:900px){.props{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.props{grid-template-columns:1fr}}
+
+/* ---------- work order / services ---------- */
+.order{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);overflow:hidden}
+.order-top{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  background:var(--ink);color:var(--sand);padding:.85rem 1.4rem;
+  font-family:"Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;font-weight:600;
+}
+.order-top b{color:#fff;letter-spacing:.16em}
+.group-head{
+  display:flex;align-items:center;gap:.8rem;padding:1.15rem 1.4rem .55rem;
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  font-size:.84rem;color:var(--text-3);
+}
+.group-head::after{content:"";height:1px;flex:1;background:var(--line)}
+.item{display:block;padding:1rem 1.4rem 1.25rem;border-top:1px solid var(--line);transition:background .18s ease}
+.group-head + .item{border-top:0}
+.item:hover{background:var(--surface-2)}
+.item-line{display:flex;align-items:baseline;gap:.6rem}
+.item-line h3{font-size:1.42rem;letter-spacing:.012em;line-height:1.05}
+.leader{flex:1;border-bottom:1px dotted var(--line-strong);transform:translateY(-.28em);min-width:1.5rem}
+.price{
+  font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.6rem;line-height:1;
+  color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap;
+}
+.meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.5rem}
+.chip{
+  font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;
+  border:1px solid var(--line-strong);color:var(--text-3);padding:.14rem .5rem;border-radius:100px;
+}
+.chip-ember{border-color:color-mix(in srgb,var(--ember) 55%,transparent);color:var(--ember)}
+.item p{margin-top:.55rem;color:var(--text-2);font-size:.96rem;line-height:1.6;max-width:64ch}
+.item .addl{margin-top:.4rem;font-size:.88rem;color:var(--text-3)}
+.item .addl b{color:var(--text-2);font-variant-numeric:tabular-nums}
+.order-foot{
+  background:var(--surface-2);border-top:1px solid var(--line-strong);padding:1rem 1.4rem;
+  color:var(--text-2);font-size:.9rem;display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap;
+}
+
+/* ---------- health check ---------- */
+.check{background:var(--dk-bg-2);color:var(--dk-text);border:1px solid var(--dk-line);border-radius:var(--r);overflow:hidden;position:relative}
+.check-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(2rem,4.5vw,3.4rem);align-items:center}
+@media (max-width:860px){.check-grid{grid-template-columns:1fr}}
+.check h2{font-size:var(--step-2);color:#fff}
+.check .eyebrow{color:var(--ember)}
+.check p{color:var(--dk-text-2);margin-top:.9rem;max-width:44ch;line-height:1.6}
+.checklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--dk-line);border:1px solid var(--dk-line)}
+@media (max-width:520px){.checklist{grid-template-columns:1fr}}
+.checklist li{background:var(--dk-bg);padding:1rem 1.1rem;display:flex;gap:.75rem;align-items:flex-start}
+.checklist svg{width:18px;height:18px;color:var(--red-on-dark);flex:none;margin-top:.25rem}
+.checklist b{display:block;font-family:"Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.86rem;color:var(--sand)}
+.checklist span{font-size:.88rem;color:var(--dk-text-2);line-height:1.5}
+.free-seal{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;
+  border:1px solid var(--ember);color:var(--ember);border-radius:100px;padding:.35rem .9rem;
+  font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;
+}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2.5rem);counter-reset:s}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+.step{border-top:2px solid var(--accent);padding-top:1.1rem}
+.step .n{
+  font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.14em;
+  color:var(--accent);font-variant-numeric:tabular-nums;
+}
+.step h3{font-size:1.5rem;margin-top:.35rem}
+.step p{margin-top:.6rem;color:var(--text-2);line-height:1.6;font-size:.97rem}
+
+/* ---------- fleet ---------- */
+.fleet{background:var(--surface);border-block:1px solid var(--line)}
+.fleet-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media (max-width:860px){.fleet-grid{grid-template-columns:1fr}}
+.fleet ul{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.1rem}
+.fleet li{display:flex;gap:.8rem;padding:.75rem 0;border-bottom:1px solid var(--line);align-items:baseline}
+.fleet li::before{content:"";width:7px;height:7px;background:var(--accent);flex:none;transform:translateY(-1px);border-radius:1px}
+.fleet li b{font-family:"Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem}
+.fleet li span{color:var(--text-2);font-size:.95rem}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr}}
+.about-mark{justify-self:center;width:min(280px,68vw);aspect-ratio:545/550}
+.about p{color:var(--text-2);line-height:1.7;margin-top:1rem;max-width:58ch}
+.pull{
+  border-left:3px solid var(--accent);padding:.2rem 0 .2rem 1.1rem;margin-top:1.6rem;
+  font-family:"Big Shoulders Display",sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:1.5rem;line-height:1.1;color:var(--text);
+}
+
+/* ---------- final cta ---------- */
+.cta{background:var(--dk-bg);color:var(--dk-text);border-top:1px solid var(--dk-line);position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 90% at 50% 120%,rgba(197,98,39,.3),transparent 62%)}
+.cta .wrap{position:relative;text-align:center}
+.cta h2{font-size:var(--step-3);color:#fff}
+.cta p{color:var(--dk-text-2);margin:1rem auto 0;max-width:46ch}
+.cta .hero-cta{justify-content:center}
+
+/* ---------- footer ---------- */
+footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-line);padding:2.5rem 0 2rem}
+.foot{display:flex;gap:1.5rem;justify-content:space-between;align-items:center;flex-wrap:wrap;font-size:.9rem}
+.foot .mark{aspect-ratio:545/550}
+.foot a{color:var(--sand);text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot .fine{font-family:"Barlow Condensed",sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.76rem;color:#7A6656}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+</style>
+
+<header id="hdr">
+  <nav class="nav wrap" aria-label="Main">
+    <a class="brand" href="#top">
+      <span class="mark" style="width:44px;height:44px" role="img" aria-label="Red Bird Mobile Auto and Fleet"></span>
+      <span class="wordmark"><b>Red Bird</b><i>Mobile Auto &amp; Fleet</i></span>
+    </a>
+    <a class="link" href="#services">Services</a>
+    <a class="link" href="#healthcheck">Health Check</a>
+    <a class="link" href="#fleet">Fleet</a>
+    <a class="link" href="#about">About</a>
+    <a class="btn btn-red" href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book online</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <svg class="ridge" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
+      <polygon points="0,232 190,150 300,196 470,104 610,178 760,128 900,192 1080,120 1240,186 1440,138 1440,300 0,300" fill="#241B16"/>
+      <polygon points="0,268 160,214 330,254 500,196 660,246 830,206 1010,252 1190,208 1330,248 1440,220 1440,300 0,300" fill="#1A1310"/>
+      <rect y="272" width="1440" height="28" fill="#0E0B0A"/>
+      <g fill="#0E0B0A">
+        <path d="M96 272v-46c0-14 12-14 12 0v46zM88 272v-30c0-13 8-13 8-2v32zM108 272v-24c0-12 8-12 8 1v23z"/>
+        <path d="M1332 272v-40c0-13 11-13 11 0v40zM1324 272v-26c0-12 8-12 8-1v27zM1343 272v-20c0-11 8-11 8 1v19z"/>
+      </g>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow rv">Veteran owned <i></i> Firefighter operated <i></i> Arizona</p>
+        <h1 class="rv">Your driveway<em>is the shop.</em></h1>
+        <p class="lede rv">Oil changes, filters and tire service done where your truck already sits &mdash; home, office or job site. No waiting room, no drop&#8209;off, no shuttle ride.</p>
+        <div class="hero-cta rv">
+          <a class="btn btn-red btn-lg" href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book an appointment</a>
+          <a class="btn btn-ghost-dk btn-lg" href="#services">See pricing</a>
+        </div>
+      </div>
+      <span class="mark badge-shot rv" role="img" aria-label="Red Bird Mobile Auto and Fleet, veteran owned and operated"></span>
+    </div>
+  </div>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <div class="strip">
+    <ul class="wrap">
+      <li><b>On&#8209;site</b><span>Every service</span></li>
+      <li><b>$85</b><span>Oil change from</span></li>
+      <li><b>Free</b><span>Vehicle health check</span></li>
+      <li><b>Fleet</b><span>Accounts welcome</span></li>
+    </ul>
+  </div>
+
+  <!-- ===== WHY MOBILE ===== -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow banner-rule">Why mobile</p>
+        <h2>The shop comes to the vehicle</h2>
+        <p>A shop visit costs you the drive, the wait and the drive back on top of the service itself. We do the same work in your parking spot while you keep working.</p>
+      </div>
+      <div class="props rv">
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h1a2 2 0 0 0 4 0h6a2 2 0 0 0 4 0h3v-5l-2.5-4H14V7H3z"/><circle cx="6" cy="17" r="2"/><circle cx="16" cy="17" r="2"/></svg>
+          <h3>We drive to you</h3>
+          <p>Home, apartment lot, office park or job site. If we can park next to it, we can service it.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          <h3>Nothing to drop off</h3>
+          <p>No shuttle, no rental, no second trip. Your vehicle stays exactly where you left it.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <h3>Priced up front</h3>
+          <p>Every service is listed with its price before you book. Overages are quoted per quart, not guessed at.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg>
+          <h3>Local and accountable</h3>
+          <p>Owned and run by a firefighter and veteran from this valley. You get the owner, not a call center.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow banner-rule">Services &amp; pricing</p>
+        <h2>The whole menu, on the table</h2>
+        <p>Book any line item online. Every oil change includes a new filter and the free Red Bird Vehicle Health Check.</p>
+      </div>
+
+      <div class="order rv">
+        <div class="order-top">
+          <b>Red Bird service menu</b>
+          <span>Mobile &middot; Arizona &middot; Prices in USD</span>
+        </div>
+
+        <p class="group-head">Oil &amp; filter changes</p>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Conventional oil change</h3>
+            <span class="leader"></span>
+            <span class="price">$85.00</span>
+          </div>
+          <div class="meta"><span class="chip">Up to 5 qt</span><span class="chip chip-ember">Health check included</span></div>
+          <p>Conventional oil up to 5 quarts, a new oil filter, and the free Red Bird Vehicle Health Check &mdash; fluid, tire, battery and belt/hose inspection.</p>
+          <p class="addl">Additional oil beyond 5 qt billed at <b>$8/qt</b>.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Full synthetic oil change</h3>
+            <span class="leader"></span>
+            <span class="price">$105.00</span>
+          </div>
+          <div class="meta"><span class="chip">Up to 5 qt</span><span class="chip chip-ember">Health check included</span></div>
+          <p>Full synthetic oil up to 5 quarts, a new oil filter, and the free Red Bird Vehicle Health Check. The right call for most late-model engines and Arizona summers.</p>
+          <p class="addl">Additional oil beyond 5 qt billed at <b>$9/qt</b>.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Diesel oil change</h3>
+            <span class="leader"></span>
+            <span class="price">$159.00</span>
+          </div>
+          <div class="meta"><span class="chip">Up to 12 qt</span><span class="chip chip-ember">Health check included</span></div>
+          <p>Diesel oil up to 12 quarts, a new filter, and the free Red Bird Vehicle Health Check. Built for the three-quarter and one-ton trucks that do real work.</p>
+          <p class="addl">Additional oil billed at <b>$10/qt</b>.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>UTV oil &amp; filter change</h3>
+            <span class="leader"></span>
+            <span class="price">$100.00</span>
+          </div>
+          <div class="meta"><span class="chip">Powersports</span></div>
+          <p>Premium powersports oil and filter for your side-by-side, serviced in the driveway or at the trailhead lot before the next ride.</p>
+        </article>
+
+        <p class="group-head">Filters, tires &amp; upkeep</p>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Engine air filter</h3>
+            <span class="leader"></span>
+            <span class="price">$15.00</span>
+          </div>
+          <div class="meta"><span class="chip">Labor only</span></div>
+          <p>Labor for a standard-access engine air filter swap. Great to stack onto an oil change.</p>
+          <p class="addl">Filter cost <b>$15&ndash;$30</b> added separately based on vehicle.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Cabin air filter</h3>
+            <span class="leader"></span>
+            <span class="price">$15.00</span>
+          </div>
+          <div class="meta"><span class="chip">Labor only</span></div>
+          <p>Labor for a standard-access cabin air filter swap &mdash; the one that decides what your A/C smells like in July.</p>
+          <p class="addl">Filter cost <b>$15&ndash;$30</b> added separately based on vehicle.</p>
+        </article>
+
+        <article class="item">
+          <div class="item-line">
+            <h3>Tire rotation</h3>
+            <span class="leader"></span>
+            <span class="price">$45.00</span>
+          </div>
+          <div class="meta"><span class="chip">Four tires</span></div>
+          <p>Standard four-tire rotation including a tire pressure check. No additional parts cost expected.</p>
+        </article>
+
+        <div class="order-foot">
+          <span>Stack services in one visit &mdash; add filters or a rotation to the same oil change appointment.</span>
+          <a class="btn btn-red" href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HEALTH CHECK ===== -->
+  <section id="healthcheck">
+    <div class="wrap">
+      <div class="check rv">
+        <div class="check-grid">
+          <div>
+            <p class="eyebrow">Included free</p>
+            <h2>The Red Bird Vehicle Health Check</h2>
+            <p>Every oil change comes with a walk-around of the things that strand people on the 101 in August. You get told what we found &mdash; not sold a list.</p>
+            <span class="free-seal">No charge, every oil change</span>
+          </div>
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.5 6 10.5A6 6 0 0 1 6 13.5C6 9.5 12 3 12 3z"/></svg>
+              <div><b>Fluids</b><span>Levels and condition, topped where needed.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>
+              <div><b>Tires</b><span>Tread depth, wear pattern and pressures set.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 5v3M17 5v3M8 13h3M15.5 13h1"/></svg>
+              <div><b>Battery</b><span>Charge, terminals and corrosion check.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16c4 0 4-8 8-8s4 8 8 8"/><circle cx="4" cy="16" r="1.6"/><circle cx="20" cy="16" r="1.6"/></svg>
+              <div><b>Belts &amp; hoses</b><span>Cracking, glazing and soft spots before they let go.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <p class="eyebrow banner-rule">How it works</p>
+        <h2>Three steps, one stop</h2>
+      </div>
+      <div class="steps rv">
+        <div class="step">
+          <p class="n">STEP 01</p>
+          <h3>Pick your service</h3>
+          <p>Choose from the menu and book a time online. Add filters or a rotation to the same appointment.</p>
+        </div>
+        <div class="step">
+          <p class="n">STEP 02</p>
+          <h3>Give us a parking spot</h3>
+          <p>Tell us where the vehicle sits and leave the keys accessible. We bring the oil, filters, tools and a drip mat.</p>
+        </div>
+        <div class="step">
+          <p class="n">STEP 03</p>
+          <h3>Get the report and go</h3>
+          <p>Service done, old oil hauled off, health check results in hand. Pay on the spot &mdash; card, tap or invoice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLEET ===== -->
+  <section id="fleet" class="fleet">
+    <div class="wrap fleet-grid">
+      <div class="rv">
+        <p class="eyebrow banner-rule">Fleet service</p>
+        <h2 style="font-size:var(--step-2);margin-top:.55rem">Trucks that don&rsquo;t leave the yard</h2>
+        <p style="color:var(--text-2);margin-top:.9rem;line-height:1.6;max-width:48ch">Downtime is the real cost of maintenance. We service work trucks, vans and equipment on site &mdash; overnight, early morning or whenever your crews are off the road.</p>
+        <div class="hero-cta" style="margin-top:1.6rem"><a class="btn btn-red" href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book fleet service</a></div>
+      </div>
+      <ul class="rv">
+        <li><b>On&#8209;site</b><span>We come to your yard, lot or job site.</span></li>
+        <li><b>Off&#8209;hours</b><span>Scheduled around your dispatch, not ours.</span></li>
+        <li><b>Diesel ready</b><span>Up to 12 qt on the truck, more on request.</span></li>
+        <li><b>Records</b><span>Per-vehicle service history and one monthly invoice.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <span class="mark about-mark rv" role="img" aria-label="Red Bird Mobile Auto and Fleet badge"></span>
+      <div class="rv">
+        <p class="eyebrow banner-rule">Who shows up</p>
+        <h2 style="font-size:var(--step-2);margin-top:.55rem">A firefighter with a truck full of tools</h2>
+        <p>Red Bird Mobile Auto and Fleet is owned and operated by a firefighter and military veteran. Same habits either way: show up on time, do the job right the first time, tell people the truth about what you found.</p>
+        <p>That is the whole business model. No upsell scripts, no mystery shop fees &mdash; just maintenance done well, in your driveway, by the person whose name is on the truck.</p>
+        <p class="pull">Veteran owned and operated.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOOK ===== -->
+  <section id="book" class="cta">
+    <div class="wrap">
+      <h2 class="rv">Ready when you are</h2>
+      <p class="rv">Pick your service and grab a slot on the booking calendar. Fleet and multi-vehicle jobs, book any service and note the details.</p>
+      <div class="hero-cta rv">
+        <a class="btn btn-red btn-lg" href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book an appointment</a>
+        <a class="btn btn-ghost-dk btn-lg" href="#services">See services &amp; pricing</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="mark" style="width:56px;height:56px" aria-hidden="true"></span>
+    <div>
+      <div><strong style="color:var(--sand)">Red Bird Mobile Auto and Fleet LLC</strong></div>
+      <div>Mobile service across the valley &middot; <a href="https://book.squareup.com/appointments/jh7wrwi5ospkv9/location/LF0E1JCXCWH4S/services?buttonTextColor=ffffff&amp;color=000000&amp;locale=en&amp;referrer=so" target="_blank" rel="noopener">Book online</a></div>
+    </div>
+    <p class="fine">Veteran owned and operated</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hdr = document.getElementById('hdr');
+  var onScroll = function(){ hdr.classList.toggle('is-stuck', window.scrollY > 24); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+  els.forEach(function(e, i){
+    if (e.closest('.hero')) { e.style.transitionDelay = (i * 90) + 'ms'; }
+    io.observe(e);
+  });
+})();
+</script>
+
+</body>
+</html>

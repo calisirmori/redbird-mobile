@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Book a Service &mdash; Red Bird Mobile Auto and Fleet</title>
+<title>Book a Service | Red Bird Mobile Auto and Fleet</title>
 <meta name="description" content="Schedule mobile oil changes, filter replacement and tire rotation with Red Bird Mobile Auto and Fleet. Pick your service and a time that works.">
 <link rel="canonical" href="https://redbirdmobile.com/schedule/">
 <meta name="theme-color" content="#14100E">
@@ -14,8 +14,8 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Red Bird Mobile Auto and Fleet">
-<meta property="og:title" content="Book a Service &mdash; Red Bird Mobile Auto and Fleet">
-<meta property="og:description" content="Pick your service and a time. Mobile oil changes, filters and tire service across Arizona.">
+<meta property="og:title" content="Book a Service | Red Bird Mobile Auto and Fleet">
+<meta property="og:description" content="Pick your service and a time. Mobile oil changes, filters and tire service across the Globe-Miami area.">
 <meta property="og:url" content="https://redbirdmobile.com/schedule/">
 <meta property="og:image" content="https://redbirdmobile.com/assets/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -62,7 +62,7 @@
   --step-1:clamp(1.15rem,1.09rem + .3vw,1.3rem);
   --step-2:clamp(1.5rem,1.35rem + .7vw,1.9rem);
   --step-3:clamp(2.1rem,1.7rem + 1.9vw,3.1rem);
-  --step-4:clamp(3rem,2.1rem + 4.2vw,5.4rem);
+  --step-4:clamp(2.6rem,1.9rem + 3.4vw,4.3rem);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -159,6 +159,8 @@ header.is-stuck{background:color-mix(in srgb,var(--dk-bg) 92%,transparent);backd
 .btn-ghost{border-color:var(--line-strong);color:var(--text)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
 .btn-lg{font-size:1.12rem;padding:.9rem 1.7rem}
+.btn-call svg{width:17px;height:17px;flex:none}
+@media (max-width:760px){.btn-call span{display:none}.btn-call{padding:.72rem .85rem}}
 
 /* ---------- hero ---------- */
 .hero{position:relative;background:var(--dk-bg);color:var(--dk-text);margin-top:-72px;padding-top:72px;overflow:hidden;isolation:isolate}
@@ -185,18 +187,6 @@ header.is-stuck{background:color-mix(in srgb,var(--dk-bg) 92%,transparent);backd
 .badge-shot{justify-self:center;width:min(340px,74vw);aspect-ratio:545/550;filter:drop-shadow(0 24px 44px rgba(0,0,0,.55))}
 
 /* trust strip */
-.strip{background:var(--dk-bg-2);border-block:1px solid var(--dk-line);color:var(--dk-text)}
-.strip ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
-.strip li{padding:1.1rem .5rem;text-align:center;border-left:1px solid var(--dk-line)}
-.strip li:first-child{border-left:0}
-.strip b{display:block;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.6rem;color:var(--sand);line-height:1;font-variant-numeric:tabular-nums}
-.strip span{font-family:"Barlow Condensed",sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dk-text-2)}
-@media (max-width:720px){
-  .strip ul{grid-template-columns:1fr 1fr}
-  .strip li:nth-child(3){border-left:0}
-  .strip li:nth-child(n+3){border-top:1px solid var(--dk-line)}
-}
-
 /* ---------- section scaffold ---------- */
 section{padding:clamp(3.5rem,7vw,6rem) 0}
 .sec-head{max-width:62ch;margin-bottom:clamp(2rem,4vw,3rem)}
@@ -205,15 +195,8 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .banner-rule{display:flex;align-items:center;gap:.5rem}
 .banner-rule::after{content:"";height:2px;flex:1;background:var(--accent);opacity:.9}
 .banner-rule::before{content:"";width:26px;height:2px;background:var(--accent)}
-
-/* ---------- value props ---------- */
-.props{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.props article{background:var(--bg);padding:1.6rem 1.4rem}
-.props svg{width:26px;height:26px;color:var(--accent);margin-bottom:.9rem}
-.props h3{font-size:1.35rem;letter-spacing:.01em}
-.props p{margin-top:.5rem;color:var(--text-2);font-size:.95rem;line-height:1.55}
-@media (max-width:900px){.props{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.props{grid-template-columns:1fr}}
+.sec-head.is-center{max-width:none;text-align:center;margin-inline:auto}
+.sec-head.is-center h2{margin:0}
 
 /* ---------- work order / services ---------- */
 .order{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--r);overflow:hidden}
@@ -229,7 +212,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
   font-size:.84rem;color:var(--text-3);
 }
 .group-head::after{content:"";height:1px;flex:1;background:var(--line)}
-.item{display:block;padding:1rem 1.4rem 1.25rem;border-top:1px solid var(--line);transition:background .18s ease}
+.item{display:block;padding:.95rem 1.4rem 1.05rem;border-top:1px solid var(--line);transition:background .18s ease}
 .group-head + .item{border-top:0}
 .item:hover{background:var(--surface-2)}
 .item-line{display:flex;align-items:baseline;gap:.6rem}
@@ -239,59 +222,35 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
   font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:1.6rem;line-height:1;
   color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap;
 }
-.meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;margin-top:.5rem}
+.meta{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap;margin-top:.45rem}
 .chip{
   font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;
   border:1px solid var(--line-strong);color:var(--text-3);padding:.14rem .5rem;border-radius:100px;
 }
-.chip-ember{border-color:color-mix(in srgb,var(--ember) 55%,transparent);color:var(--ember)}
-.item p{margin-top:.55rem;color:var(--text-2);font-size:.96rem;line-height:1.6;max-width:64ch}
-.item .addl{margin-top:.4rem;font-size:.88rem;color:var(--text-3)}
-.item .addl b{color:var(--text-2);font-variant-numeric:tabular-nums}
 .order-foot{
   background:var(--surface-2);border-top:1px solid var(--line-strong);padding:1rem 1.4rem;
   color:var(--text-2);font-size:.9rem;display:flex;gap:1rem;justify-content:space-between;align-items:center;flex-wrap:wrap;
 }
 
-/* ---------- health check ---------- */
-.check{background:var(--dk-bg-2);color:var(--dk-text);border:1px solid var(--dk-line);border-radius:var(--r);overflow:hidden;position:relative}
-.check-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(2rem,4.5vw,3.4rem);align-items:center}
-@media (max-width:860px){.check-grid{grid-template-columns:1fr}}
-.check h2{font-size:var(--step-2);color:#fff}
-.check .eyebrow{color:var(--ember)}
-.check p{color:var(--dk-text-2);margin-top:.9rem;max-width:44ch;line-height:1.6}
-.checklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--dk-line);border:1px solid var(--dk-line)}
-@media (max-width:520px){.checklist{grid-template-columns:1fr}}
-.checklist li{background:var(--dk-bg);padding:1rem 1.1rem;display:flex;gap:.75rem;align-items:flex-start}
-.checklist svg{width:18px;height:18px;color:var(--red-on-dark);flex:none;margin-top:.25rem}
-.checklist b{display:block;font-family:"Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.86rem;color:var(--sand)}
-.checklist span{font-size:.88rem;color:var(--dk-text-2);line-height:1.5}
-.free-seal{
-  display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;
-  border:1px solid var(--ember);color:var(--ember);border-radius:100px;padding:.35rem .9rem;
-  font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem;
-}
-
 /* ---------- steps ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2.5rem);counter-reset:s}
+#how{background:var(--surface);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.5rem,3vw,2.8rem)}
 @media (max-width:800px){.steps{grid-template-columns:1fr}}
-.step{border-top:2px solid var(--accent);padding-top:1.1rem}
+.step{padding-top:0}
 .step .n{
-  font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.14em;
+  font-family:"Big Shoulders Display","Arial Narrow",sans-serif;font-weight:800;font-size:3.6rem;line-height:.8;
   color:var(--accent);font-variant-numeric:tabular-nums;
 }
-.step h3{font-size:1.5rem;margin-top:.35rem}
-.step p{margin-top:.6rem;color:var(--text-2);line-height:1.6;font-size:.97rem}
+.step .n::after{content:"";display:block;width:38px;height:3px;border-radius:1px;background:var(--accent);margin-top:.75rem}
+.step h3{font-size:1.5rem;margin-top:1rem}
+.step p{margin-top:.5rem;color:var(--text-2);line-height:1.55;font-size:.97rem;max-width:32ch}
 
 /* ---------- fleet ---------- */
-.fleet{background:var(--surface);border-block:1px solid var(--line)}
-.fleet-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-@media (max-width:860px){.fleet-grid{grid-template-columns:1fr}}
-.fleet ul{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.1rem}
-.fleet li{display:flex;gap:.8rem;padding:.75rem 0;border-bottom:1px solid var(--line);align-items:baseline}
-.fleet li::before{content:"";width:7px;height:7px;background:var(--accent);flex:none;transform:translateY(-1px);border-radius:1px}
-.fleet li b{font-family:"Barlow Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;font-size:.95rem}
-.fleet li span{color:var(--text-2);font-size:.95rem}
+.fleet{border-bottom:1px solid var(--line)}
+.fleet-inner{text-align:center;max-width:54ch;margin-inline:auto}
+.fleet-inner h2{font-size:var(--step-3);margin-top:.55rem}
+.fleet-inner p{color:var(--text-2);margin-top:.9rem;line-height:1.6}
+.fleet-contact{margin-top:1.8rem}
 
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
@@ -310,7 +269,10 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .cta .wrap{position:relative;text-align:center}
 .cta h2{font-size:var(--step-3);color:#fff}
 .cta p{color:var(--dk-text-2);margin:1rem auto 0;max-width:46ch}
-.cta .hero-cta{justify-content:center}
+.cta .hero-cta{justify-content:center;margin-top:2.2rem}
+.cta .eyebrow{color:var(--ember)}
+.closing-mark{width:min(150px,34vw);aspect-ratio:545/550;margin:0 auto 1.5rem}
+.cta h2{max-width:24ch;margin-inline:auto}
 
 /* ---------- footer ---------- */
 footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-line);padding:2.5rem 0 2rem}
@@ -361,9 +323,9 @@ footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-l
       <span class="wordmark"><b>Red Bird</b><i>Mobile Auto &amp; Fleet</i></span>
     </a>
     <a class="link" href="/#services">Services</a>
-    <a class="link" href="/#healthcheck">Health Check</a>
     <a class="link" href="/#fleet">Fleet</a>
     <a class="link" href="/#about">About</a>
+    <a class="btn btn-ghost-dk btn-call" href="tel:+19288127575" aria-label="Call 928-812-7575"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5L16 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 6.2 2 2 0 0 1 5 4z"/></svg><span>928-812-7575</span></a>
   </nav>
 </header>
 
@@ -372,7 +334,7 @@ footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-l
     <div class="wrap">
       <p class="eyebrow">Book online</p>
       <h1>Schedule your service</h1>
-      <p>Pick the service you need and a time that works. We bring the oil, filters, tools and a drip mat to you &mdash; home, office or job site.</p>
+      <p>Pick the service you need and a time that works. We bring the oil, filters, tools and a drip mat to you at home, at work or at the job site.</p>
       <a class="backlink" href="/#services">&larr; Back to services &amp; pricing</a>
     </div>
   </div>
@@ -381,11 +343,11 @@ footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-l
     <div class="wrap">
       <div class="widget">
         <!-- Square Appointments embed. The script inserts its iframe immediately before itself,
-             so it has to stay inside this div — moving it to <head> makes Square redirect the whole page. -->
+             so it has to stay inside this div. Moving it to <head> makes Square redirect the whole page. -->
         <script src="https://square.site/appointments/buyer/widget/jh7wrwi5ospkv9/LF0E1JCXCWH4S.js"></script>
       </div>
       <p class="fallback">Booking window not loading?
-        <a href="https://app.squareup.com/appointments/book/jh7wrwi5ospkv9/LF0E1JCXCWH4S/start" target="_blank" rel="noopener">Open Square&rsquo;s booking page directly</a>.</p>
+        <a href="https://app.squareup.com/appointments/book/jh7wrwi5ospkv9/LF0E1JCXCWH4S/start" target="_blank" rel="noopener">Open Square&rsquo;s booking page directly</a>, or call <a href="tel:+19288127575">928-812-7575</a>.</p>
     </div>
   </section>
 </main>
@@ -395,7 +357,7 @@ footer{background:#0E0B0A;color:var(--dk-text-2);border-top:1px solid var(--dk-l
     <span class="mark" style="width:56px;height:56px" aria-hidden="true"></span>
     <div>
       <div><strong style="color:var(--sand)">Red Bird Mobile Auto and Fleet LLC</strong></div>
-      <div>Mobile service across the valley &middot; <a href="/">Home</a></div>
+      <div>Serving the Globe-Miami area &middot; <a href="tel:+19288127575">928-812-7575</a> &middot; <a href="/">Home</a></div>
     </div>
     <p class="fine">Veteran owned and operated</p>
   </div>

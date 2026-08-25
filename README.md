@@ -1,7 +1,7 @@
 # Red Bird Mobile Auto and Fleet
 
-Marketing site for **Red Bird Mobile Auto and Fleet LLC** — veteran owned, firefighter
-operated mobile auto service in Arizona.
+Marketing site for **Red Bird Mobile Auto and Fleet LLC**, a veteran owned mobile auto
+service in the Globe-Miami area of Arizona.
 
 Static site, no build step. Open `index.html` in a browser and it works.
 
@@ -23,12 +23,17 @@ Static site, no build step. Open `index.html` in a browser and it works.
 
 ## Common edits
 
-**Change a price or service** — search `index.html` for the price (e.g. `$85.00`).
-Each service is one `<article class="item">` block. Update the price in the
-`<span class="price">` and the copy underneath. Keep the Square booking page in sync;
-this page does not read prices from Square.
+**Change a price or service** — search `index.html` for the price (e.g. `$100.00`).
+Each service is one `<article class="item">` block: a name, a price, and `<span class="chip">`
+tags for the details. **Two places must change together** — the visible row *and* the matching
+entry in the `application/ld+json` block near the top of the file, which is what Google reads.
+Keep the Square booking catalog in sync too; this page does not read prices from Square.
 
-**Change the booking link** — search for `book.squareup.com` and replace all 6 links.
+**Change the booking link** — search for `book.squareup.com` and replace every link.
+
+**Change the phone number** — search for `9288127575` (the `tel:` links) and `928-812-7575`
+(the visible text). It appears in the header, the fleet section, the closing call to action,
+the footer, the `/schedule` page and the structured data.
 
 **Colors** — every color is a CSS variable at the top of the `<style>` block in
 `index.html`, under `:root`. The brand values are sampled from the logo:
@@ -46,16 +51,13 @@ whichever their phone or laptop is set to.
 
 ## Still to add
 
-- [ ] **Phone number.** Deliberately left out — there is no placeholder number anywhere,
-      so nothing fake is live. To add a text-us button, drop this next to any
-      "Book an appointment" link:
-      `<a class="btn btn-ghost-dk btn-lg" href="sms:+1XXXXXXXXXX">Text us</a>`
-- [ ] **Address / service radius.** The page says "Arizona" and "across the valley".
-      Naming the actual cities you serve is the single biggest local-search win available.
-- [ ] **Business details in structured data.** `index.html` has a `TODO` comment on the
-      `application/ld+json` block for `telephone` and `address`.
-- [ ] **Photos.** A few real shots of the truck and a service in progress would carry
-      more trust than any copy on the page.
+- [ ] **Service area detail.** The page says "Globe-Miami area". Naming the actual towns you
+      cover is the biggest local-search win still on the table.
+- [ ] **Photos.** A few real shots of the truck and a service in progress would carry more
+      trust than any copy on the page.
+- [ ] **Square service descriptions.** Several still mention a "free Red Bird Vehicle Health
+      Check", which has been removed from this site. Those live in Square Dashboard →
+      Items & Services, not in this repo, and they show inside the widget on `/schedule`.
 
 ## Deploying
 

@@ -23,7 +23,7 @@ Static site, no build step. Open `index.html` in a browser and it works.
 
 ## Common edits
 
-**Change a price or service** — search `index.html` for the price (e.g. `$100.00`).
+**Change a price or service** — search `index.html` for the price (e.g. `$85.00`).
 Each service is one `<article class="item">` block: a name, a price, and `<span class="chip">`
 tags for the details. **Two places must change together** — the visible row *and* the matching
 entry in the `application/ld+json` block near the top of the file, which is what Google reads.
